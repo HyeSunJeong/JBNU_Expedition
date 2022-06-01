@@ -2,8 +2,12 @@ package kr.ac.jbnu.se.JBNU_Expedition;
 
 // 기본 import
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 // compat, Fragment import
@@ -33,12 +37,23 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
     private FusedLocationSource locationSource;
     private NaverMap naverMap;
+    private ImageView diaryBtn;
 
     // MainActivity onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 왜 여기서 protected 사용했지?
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map);
+
+        diaryBtn = (ImageView) findViewById(R.id.diary_btn);
+
+        diaryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Map.this, ExpeditionDiary.class);
+                startActivity(intent);
+            }
+        });
 
         // 지도 객체 생성
         FragmentManager fm = getSupportFragmentManager();

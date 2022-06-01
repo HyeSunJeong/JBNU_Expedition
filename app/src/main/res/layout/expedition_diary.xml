@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#F9F9F9">
+
+
+        <ImageView
+            android:id="@+id/diary_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/back">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/apple_sd_gothic_neo_extra_bold"
+            android:text="탐험 일지"
+            android:textColor="#747474"
+            android:textSize="25dp">
+        </TextView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line">
+    </ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1">
+
+
+        <ImageView
+            android:id="@+id/loc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="215dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="215dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="445dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="445dp"
+            android:layout_marginLeft="215dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="660dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/diary_window">
+        </ImageView>
+    </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

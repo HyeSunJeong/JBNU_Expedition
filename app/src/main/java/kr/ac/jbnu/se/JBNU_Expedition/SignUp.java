@@ -52,7 +52,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 if (!signUpEmail.getText().toString().equals("") && !signUpPassword.getText().toString().equals("")) {
                     // 이메일과 비밀번호가 공백이 아닌 경우
-                    createUser(signUpEmail.getText().toString(), signUpEmail.getText().toString(), signUpId.getText().toString());
+                    createUser(signUpEmail.getText().toString(), signUpPassword.getText().toString(), signUpId.getText().toString());
                 } else {
                     // 이메일과 비밀번호가 공백인 경우
                     Toast.makeText(SignUp.this, "이메일과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
@@ -64,7 +64,7 @@ public class SignUp extends AppCompatActivity {
         signUpBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignIn.class);
+                Intent intent = new Intent(getApplicationContext(), Map.class);
                 startActivity(intent);
             }
         });
