@@ -38,6 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // 네이버 지도 띄우기
     implementation 'com.naver.maps:map-sdk:3.15.0'
-    // 네이버 좌표
+    // 네이버 지도 위치
     implementation 'com.google.android.gms:play-services-location:19.0.1'
 }

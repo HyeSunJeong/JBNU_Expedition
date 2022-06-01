@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F9F9F9">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/main_icon">
+    </ImageView>
+
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="전북대 탐험"
+        android:textSize="45dp"
+        android:textColor="#747474"
+        android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="155dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:text="JBNU Expedition"
+        android:textSize="20dp"
+        android:textColor="#747474"
+        android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+    </TextView>
+
+    <EditText
+        android:layout_marginTop="90dp"
+        android:background="@drawable/edit_text_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="     아이디"
+        android:textColorHint="#A3A3A3"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:textSize="18dp">
+    </EditText>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="     비밀번호"
+        android:textColorHint="#A3A3A3"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium"
+        android:textSize="18dp">
+    </EditText>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/sign_in_btn"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageButton>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="로그인"
+            android:textSize="19dp"
+            android:textColor="#6F6F6F"
+            android:fontFamily="@font/apple_sd_gothic_neo_bold"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sign_up_btn"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6F6F6F"
+        android:text="회원가입"
+        android:fontFamily="@font/apple_sd_gothic_neo_medium">
+    </TextView>
+
+</LinearLayout>

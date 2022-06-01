@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--heavy-->
+    <font
+        android:font="@font/apple_sd_gothic_neo_heavy"
+        app:font="@font/apple_sd_gothic_neo_heavy" />
+
+    <!--extra_bold-->
+    <font
+        android:font="@font/apple_sd_gothic_neo_extra_bold"
+        app:font="@font/apple_sd_gothic_neo_extra_bold" />
+
+    <!--bold-->
+    <font
+        android:font="@font/apple_sd_gothic_neo_bold"
+        app:font="@font/apple_sd_gothic_neo_bold" />
+
+    <!--medium-->
+    <font
+        android:font="@font/apple_sd_gothic_neo_medium"
+        app:font="@font/apple_sd_gothic_neo_medium" />
+
+    <!--lite-->
+    <font
+        android:font="@font/apple_sd_gothic_neo_lite"
+        app:font="@font/apple_sd_gothic_neo_lite" />
+
+</font-family>
