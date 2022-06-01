@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "950675109983",
+    "firebase_url": "https://jbnumap-default-rtdb.firebaseio.com",
+    "project_id": "jbnumap",
+    "storage_bucket": "jbnumap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950675109983:android:1aaf9cf1cc5c4df4e983ea",
+        "android_client_info": {
+          "package_name": "kr.ac.jbnu.se.JBNU_Expedition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950675109983-5rk86ekd2ujt6rebdv027r6j3oe97e8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeR4XbexIotks_GT-z-Sx2rYwR-xxEfzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950675109983-5rk86ekd2ujt6rebdv027r6j3oe97e8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
