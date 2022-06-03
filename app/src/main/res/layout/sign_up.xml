@@ -49,7 +49,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -91,7 +91,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="100dp"
             android:fontFamily="@font/apple_sd_gothic_neo_bold"
             android:gravity="center"
             android:text="회원가입을 환영합니다!"
@@ -100,21 +100,21 @@
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <ImageButton
                 android:id="@+id/join_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/login_border"></ImageButton>
+                android:background="@drawable/login_border">
+            </ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/apple_sd_gothic_neo_bold"
+                android:fontFamily="@font/apple_sd_gothic_neo_extra_bold"
                 android:text="회원가입"
                 android:textColor="#6F6F6F"
                 android:textSize="19dp" />

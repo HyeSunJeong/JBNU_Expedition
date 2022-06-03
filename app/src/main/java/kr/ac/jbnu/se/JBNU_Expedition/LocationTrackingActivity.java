@@ -37,7 +37,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
     private NaverMap naverMap;
     private ImageView diaryBtn;
 
-    // MainActivity onCreate
+    // LocationTracking onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 왜 여기서 protected 사용했지?
         super.onCreate(savedInstanceState);
@@ -45,6 +45,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 
         diaryBtn = (ImageView) findViewById(R.id.diary_btn);
 
+        // 탐험 일지 버튼 (인탠트)
         diaryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

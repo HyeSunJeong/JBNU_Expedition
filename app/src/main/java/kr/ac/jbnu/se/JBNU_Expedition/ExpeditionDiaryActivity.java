@@ -2,8 +2,11 @@ package kr.ac.jbnu.se.JBNU_Expedition;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -51,6 +54,9 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
     // Dialog 함수 (행동)
     public void showLocation0 () {
         location0.show(); // 다이얼로그 띄우기
+
+        // Dialog 배경 투명!
+        location0.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         // TODO 주의사항: findViewById()를 쓸 때는 앞에 반드시 다이얼로그 붙이기!
 
