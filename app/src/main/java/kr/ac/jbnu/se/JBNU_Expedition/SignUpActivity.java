@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import androidx.annotation.Nullable;
 
-public class SignUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     private ImageButton joinBtn;
     private ImageView signUpBack;
@@ -55,7 +53,7 @@ public class SignUp extends AppCompatActivity {
                     createUser(signUpEmail.getText().toString(), signUpPassword.getText().toString(), signUpId.getText().toString());
                 } else {
                     // 이메일과 비밀번호가 공백인 경우
-                    Toast.makeText(SignUp.this, "이메일과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignUpActivity.this, "이메일과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -64,7 +62,7 @@ public class SignUp extends AppCompatActivity {
         signUpBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Map.class);
+                Intent intent = new Intent(getApplicationContext(), LocationTrackingActivity.class);
                 startActivity(intent);
             }
         });
@@ -78,12 +76,12 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // 회원가입 성공시
-                            Toast.makeText(SignUp.this, name + "님, 환영합니다!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), SignIn.class);
+                            Toast.makeText(SignUpActivity.this, name + "님, 환영합니다!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
                             startActivity(intent);
                         } else {
                             // 계정이 중복된 경우
-                            Toast.makeText(SignUp.this, "이미 등록된 계정입니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "이미 등록된 계정입니다.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

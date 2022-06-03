@@ -16,9 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class SignIn extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity {
 
     // 변수 선언
     private FirebaseAuth firebaseAuth;
@@ -52,7 +51,7 @@ public class SignIn extends AppCompatActivity {
                 if (!signInEmail.getText().toString().equals("") && !signInPassword.getText().toString().equals("")) {
                     loginUser(signInEmail.getText().toString(), signInPassword.getText().toString());
                 } else {
-                    Toast.makeText(SignIn.this, "이메일과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignInActivity.this, "이메일과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -61,7 +60,7 @@ public class SignIn extends AppCompatActivity {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignUp.class);
+                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
                 startActivity(intent);
             }
         });
@@ -75,14 +74,14 @@ public class SignIn extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // 로그인 성공
-                            Toast.makeText(SignIn.this, "로그인 성공", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
                             firebaseAuth.addAuthStateListener(firebaseAuthListener);
-                            Intent intent = new Intent(getApplicationContext(), Map.class);
+                            Intent intent = new Intent(getApplicationContext(), LocationTrackingActivity.class);
                             startActivity(intent);
 
                         } else {
                             // 로그인 실패
-                            Toast.makeText(SignIn.this, "아이디 또는 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInActivity.this, "아이디 또는 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

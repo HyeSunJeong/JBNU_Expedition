@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Map">
+    tools:context=".LocationTrackingActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -15,6 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="com.naver.maps.map.MapFragment" />
+
+        <!-- 아이콘 고치기-->
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +30,7 @@
                 android:src="@drawable/circle">
             </ImageView>
             <ImageView
-                android:layout_marginLeft="335dp"
+                android:layout_marginStart="335dp"
                 android:layout_marginTop="25dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

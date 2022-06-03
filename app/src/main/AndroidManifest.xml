@@ -13,16 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Map">
         <activity
-            android:name=".SignIn"
+            android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp"/>
-        <activity android:name=".Map"/>
-        <activity android:name=".ExpeditionDiary"/>
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".LocationTrackingActivity"/>
+        <activity android:name=".ExpeditionDiaryActivity"/>
+
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"

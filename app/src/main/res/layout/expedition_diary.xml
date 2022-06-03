@@ -41,7 +41,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#F1F1F1">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -50,21 +51,30 @@
 
 
         <ImageView
-            android:id="@+id/loc1"
+            android:id="@+id/loc0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/diary_window">
+            android:src="@drawable/diary">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/loc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="215dp"
+            android:src="@drawable/diary">
         </ImageView>
 
         <ImageView
             android:id="@+id/loc2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="215dp"
-            android:src="@drawable/diary_window">
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/diary">
         </ImageView>
 
         <ImageView
@@ -72,17 +82,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="230dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/diary_window">
+            android:layout_marginLeft="215dp"
+            android:src="@drawable/diary">
         </ImageView>
 
         <ImageView
             android:id="@+id/loc4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="230dp"
-            android:layout_marginLeft="215dp"
-            android:src="@drawable/diary_window">
+            android:layout_marginTop="445dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/diary">
         </ImageView>
 
         <ImageView
@@ -90,26 +100,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="445dp"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/diary_window">
+            android:layout_marginLeft="215dp"
+            android:src="@drawable/diary">
         </ImageView>
 
         <ImageView
             android:id="@+id/loc6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="445dp"
-            android:layout_marginLeft="215dp"
-            android:src="@drawable/diary_window">
-        </ImageView>
-
-        <ImageView
-            android:id="@+id/loc7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginTop="660dp"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/diary_window">
+            android:src="@drawable/diary">
         </ImageView>
     </FrameLayout>
     </ScrollView>

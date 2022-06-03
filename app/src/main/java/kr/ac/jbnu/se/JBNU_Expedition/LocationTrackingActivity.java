@@ -6,13 +6,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 // compat, Fragment import
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
@@ -27,7 +25,7 @@ import com.naver.maps.map.UiSettings;
 import com.naver.maps.map.overlay.Marker;
 import com.naver.maps.map.util.FusedLocationSource;
 
-public class Map extends AppCompatActivity implements OnMapReadyCallback {
+public class LocationTrackingActivity extends AppCompatActivity implements OnMapReadyCallback {
     // 위치 Permission 정의
     private static final int PERMISSION_REQUEST_CODE = 100;
     private static final String[] PERMISSIONS = {
@@ -43,14 +41,14 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 왜 여기서 protected 사용했지?
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.map);
+        setContentView(R.layout.location_tracking);
 
         diaryBtn = (ImageView) findViewById(R.id.diary_btn);
 
         diaryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Map.this, ExpeditionDiary.class);
+                Intent intent = new Intent(LocationTrackingActivity.this, ExpeditionDiaryActivity.class);
                 startActivity(intent);
             }
         });
