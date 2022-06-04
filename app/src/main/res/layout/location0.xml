@@ -1,30 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_gravity="center_horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="350dp"
+    android:layout_height="700dp"
     android:orientation="vertical"
-    android:background="#000000">
+    android:src="@drawable/diary_window">
 
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:src="@drawable/diary_window">
         </ImageView>
 
         <ImageView
             android:id="@+id/closeBtn"
             android:layout_marginLeft="300dp"
-            android:layout_marginTop="30dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_marginTop="42dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/close">
         </ImageView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="35dp"
+                android:text="공과대학 5호관"
+                android:letterSpacing="0.01"
+                android:textSize="25dp"
+                android:textColor="#747474"
+                android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+            </TextView>
+
+            <ImageView
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/line">
+            </ImageView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="300dp"
+                            android:layout_height="190dp"
+                            android:src="@drawable/loc0">
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="170dp"
+                            android:src="@drawable/good">
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="235dp"
+                            android:layout_marginLeft="30dp"
+                            android:letterSpacing="0.01"
+                            android:text="2022년 05월 30일 월요일"
+                            android:textSize="19dp"
+                            android:textColor="#747474"
+                            android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                        </TextView>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:lineSpacingExtra="4.5dp"
+                        android:letterSpacing="0.01"
+                        android:text="공대 지역에서 우연히 발견한 건물.\n낡은 벽돌 외관과는 다르게 화장실은\n최신식인 것 같다."
+                        android:textSize="16dp"
+                        android:textColor="#747474"
+                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:lineSpacingExtra="4.5dp"
+                        android:letterSpacing="0.01"
+                        android:text="드나드는 사람들을 관찰해보니\n모두 커다란 가방을 메고있다.\n가방 안에는 노트북이 있을 것이 분명하다.\n왜냐하면, 이 건물은 소프트웨어공학과와\n전자재료공학과가 주로 사용하기 때문이다."
+                        android:textSize="16dp"
+                        android:textColor="#747474"
+                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:lineSpacingExtra="4.5dp"
+                        android:letterSpacing="0.01"
+                        android:text="5호관은 특이하게 건물 안이 무척 시원하다.\n더운 여름에는 참 좋지만,\n겨울에는 오히려 밖보다 건물 안이 더 춥다."
+                        android:textSize="16dp"
+                        android:textColor="#747474"
+                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:lineSpacingExtra="4.5dp"
+                        android:letterSpacing="0.01"
+                        android:text="5호관에는 전설이 하나 있다.\n바로 고라니가 있다는 사실!\n3층과 5층을 자주 돌아다니다 보면,\n고라니를 발견할 수 있을지도 모른다!"
+                        android:textSize="16dp"
+                        android:textColor="#747474"
+                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
+                    </TextView>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
     </FrameLayout>
 
 </LinearLayout>
