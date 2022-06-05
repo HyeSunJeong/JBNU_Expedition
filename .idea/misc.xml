@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/drawable/diary.xml" value="0.255" />
+        <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/layout/expedition_diary.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/layout/location0.xml" value="0.24947916666666667" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.1565" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1695" />
         <entry key="app/src/main/res/drawable/diary_background.xml" value="0.1695" />

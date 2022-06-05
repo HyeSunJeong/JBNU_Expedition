@@ -17,7 +17,7 @@
         </ImageView>
 
         <ImageView
-            android:id="@+id/loc0_close"
+            android:id="@+id/closeBtn"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="42dp"
             android:layout_width="20dp"
