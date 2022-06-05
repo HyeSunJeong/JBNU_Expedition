@@ -65,7 +65,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
     boolean isVisited[] = new boolean[NUM_OF_LOCATIONS];    // 방문(탐험) 여부 저장
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +72,8 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 
         // 탐험 일지 화면으로 가는 버튼 (이미지뷰)
         diaryBtn = (ImageView) findViewById(R.id.diary_btn);
+
+        // 탐험 일지 버튼 (인탠트)
         diaryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,7 +89,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 //            locViews[i].setVisibility(View.INVISIBLE);    // 아직 탐험(방문)하지 않았으면 안보이도록
 //            locViews[i].setClickable(false);              // 아직 탐험(방문)하지 않았으면 클릭할 수 없도록
 //        }
-
 
 
         // 지도 객체 생성

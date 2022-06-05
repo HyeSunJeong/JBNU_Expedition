@@ -3,9 +3,12 @@ package kr.ac.jbnu.se.JBNU_Expedition;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
+
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -77,6 +80,11 @@ import androidx.appcompat.app.AppCompatActivity;
 //        closeDialogBtn[4] = (ImageView) findViewById(R.id.loc4);
 //        closeDialogBtn[5] = (ImageView) findViewById(R.id.loc5);
 //        closeDialogBtn[6] = (ImageView) findViewById(R.id.loc6);
+
+        // Dialog 배경 투명!
+        // location0.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        // TODO 주의사항: findViewById()를 쓸 때는 앞에 반드시 다이얼로그 붙이기!
 
 
 //        // Dialog 닫기 버튼 동작 등록
