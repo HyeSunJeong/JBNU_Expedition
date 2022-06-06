@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="35dp"
-                android:text="중앙도서관"
+                android:text="공대 5호관"
                 android:letterSpacing="0.01"
                 android:textSize="25dp"
                 android:textColor="#747474"
@@ -68,7 +68,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_width="300dp"
                             android:layout_height="190dp"
-                            android:src="@drawable/loc0">
+                            android:src="@drawable/loc3">
                         </ImageView>
 
                         <ImageView
@@ -85,7 +85,7 @@
                             android:layout_marginTop="235dp"
                             android:layout_marginLeft="30dp"
                             android:letterSpacing="0.01"
-                            android:text="2022년 05월 30일 월요일"
+                            android:text="2022년 06월 03일 목요일"
                             android:textSize="19dp"
                             android:textColor="#747474"
                             android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
@@ -100,7 +100,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="한옥 풍의 학교 건물들과는 다르게 유럽이\n생각나는 건물이다. 중앙도서관은 내부\n시설이 최신식이다. "
+                        android:text="공대 지역에서 우연히 발견한 건물.\n낡은 벽돌 외관과는 다르게 화장실은\n최신식인 것 같다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -112,7 +112,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="도서관을 들어가는데 상당히 애먹었다.\n모바일 도서관 QR코드로 출입을 해야한다더라...\n전북대학교 모바일 도서관 어플을 미리\n다운 받아 놔야겠다."
+                        android:text="드나드는 사람들을 관찰해보니\n모두 커다란 가방을 메고있다.\n가방 안에는 노트북이 있을 것이 분명하다.\n왜냐하면, 이 건물은 소프트웨어공학과와\n전자재료공학과가 주로 사용하기 때문이다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -124,7 +124,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="내부는 도서관에 걸맞게 책이 즐비해있다.\n2층은 과학서적이 많이 있고,\n3층은 인문서적이 가득하다.\n책은 일반 학생의 경우 5권까지 빌리는 것을\n목격했다.\n또 빌리고 싶으면 반납일을 지켜야 할 텐데.."
+                        android:text="5호관은 특이하게 건물 안이 무척 시원하다.\n더운 여름에는 참 좋지만,\n겨울에는 오히려 밖보다 건물 안이 더 춥다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -136,19 +136,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="도서관이라서 책 읽는 사람만 많을 줄 알았는데,\n공부하는 사람이 엄청 많았다.\n2층과 3층은 좌석마다 콘센트가 있어 노트북으로\n공부하는 사람이 많았다. 4층은 독서실의\n분위기가 풀풀 풍겼다."
-                        android:textSize="16dp"
-                        android:textColor="#747474"
-                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
-                    </TextView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="30dp"
-                        android:lineSpacingExtra="4.5dp"
-                        android:letterSpacing="0.01"
-                        android:text="내부 탐험을 다하니 벌써 밤이 되었다.\n밤이 되어도 4층만은 여전히 불이 꺼지지 않았다.\n아마도 저 불은 학생들의 열정을 연료로 계속\n활활 타오르겠지..\n도서관 운영시간은 전북대학교 중앙도서관\n홈페이지에서 찾아볼 수 있었다."
+                        android:text="5호관에는 전설이 하나 있다.\n바로 고라니가 있다는 사실!\n3층과 5층을 자주 돌아다니다 보면,\n고라니를 발견할 수 있을지도 모른다!"
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">

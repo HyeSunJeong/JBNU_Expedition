@@ -89,6 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#6F6F6F"
+        android:textSize="16dp"
         android:text="회원가입"
         android:fontFamily="@font/apple_sd_gothic_neo_medium">
     </TextView>

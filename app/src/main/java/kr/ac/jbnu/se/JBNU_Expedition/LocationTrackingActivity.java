@@ -308,7 +308,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         double minMetric = metric[0];
         int minIndex = 0;
 
-       // 가장 가까운 장소의 인덱스 구하기
+        // 가장 가까운 장소의 인덱스 구하기
         for (int i=0; i<NUM_OF_LOCATIONS; i++) {
             if (metric[i] < minMetric) {
                 minMetric = metric[i];

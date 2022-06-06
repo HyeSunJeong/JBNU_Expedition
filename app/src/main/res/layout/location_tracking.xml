@@ -23,15 +23,15 @@
             android:layout_marginTop="8dp">
             <ImageView
                 android:id="@+id/diary_btn"
-                android:layout_marginLeft="328dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginLeft="310dp"
+                android:layout_marginTop="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/circle">
             </ImageView>
             <ImageView
-                android:layout_marginStart="335dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginStart="317dp"
+                android:layout_marginTop="37dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/diary_map">

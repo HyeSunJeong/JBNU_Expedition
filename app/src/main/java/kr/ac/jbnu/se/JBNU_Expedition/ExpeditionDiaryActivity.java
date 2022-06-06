@@ -15,12 +15,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-    public class ExpeditionDiaryActivity extends AppCompatActivity {
+public class ExpeditionDiaryActivity extends AppCompatActivity {
 
-        private static final int NUM_OF_LOCATIONS = 7;      // 탐험할 장소 개수
-        public ImageView locViews[] = new ImageView[NUM_OF_LOCATIONS];  // 각 장소에 대한 이미지뷰
-        public Dialog dialogs[] = new Dialog[NUM_OF_LOCATIONS];         // 각 장소에 대한 대화창
-        public static Context context_expDiary;     // ImageView 다른 클래스에서 사용하기 위함
+    private static final int NUM_OF_LOCATIONS = 7;      // 탐험할 장소 개수
+    public ImageView locViews[] = new ImageView[NUM_OF_LOCATIONS];  // 각 장소에 대한 이미지뷰
+    public Dialog dialogs[] = new Dialog[NUM_OF_LOCATIONS];         // 각 장소에 대한 대화창
+    public static Context context_expDiary;     // ImageView 다른 클래스에서 사용하기 위함
 
     private ImageView diaryBack;                // 뒤로 가기 버튼
 
@@ -43,10 +43,10 @@ import androidx.appcompat.app.AppCompatActivity;
         locViews[5] = (ImageView) findViewById(R.id.loc5);
         locViews[6] = (ImageView) findViewById(R.id.loc6);
 
-        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
-            locViews[i].setVisibility(View.INVISIBLE);    // 아직 탐험(방문)하지 않았으면 안보이도록
-            locViews[i].setClickable(false);              // 아직 탐험(방문)하지 않았으면 클릭할 수 없도록
-        }
+        //for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+        //    locViews[i].setVisibility(View.INVISIBLE);    // 아직 탐험(방문)하지 않았으면 안보이도록
+        //    locViews[i].setClickable(false);              // 아직 탐험(방문)하지 않았으면 클릭할 수 없도록
+        //}
 
         // Dialog
         dialogs[0] = new Dialog(ExpeditionDiaryActivity.this); // Dialog 초기화
@@ -68,6 +68,8 @@ import androidx.appcompat.app.AppCompatActivity;
                 @Override
                 public void onClick(View view) {
                     dialogs[idx].show();
+                    // Dialog 배경 투명!
+                    dialogs[0].getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 }
             });
         }
