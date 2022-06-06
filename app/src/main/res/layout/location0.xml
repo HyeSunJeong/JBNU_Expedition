@@ -85,7 +85,7 @@
                             android:layout_marginTop="235dp"
                             android:layout_marginLeft="30dp"
                             android:letterSpacing="0.01"
-                            android:text="2022년 05월 30일 월요일"
+                            android:text="전북대의 유럽"
                             android:textSize="19dp"
                             android:textColor="#747474"
                             android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">

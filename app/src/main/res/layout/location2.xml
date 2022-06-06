@@ -85,7 +85,7 @@
                             android:layout_marginTop="235dp"
                             android:layout_marginLeft="30dp"
                             android:letterSpacing="0.01"
-                            android:text="2022년 06월 02일 수요일"
+                            android:text="전북대의 랜드마크"
                             android:textSize="19dp"
                             android:textColor="#747474"
                             android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
@@ -100,7 +100,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="공대 지역에서 우연히 발견한 건물.\n낡은 벽돌 외관과는 다르게 화장실은\n최신식인 것 같다."
+                        android:text="새로운 정문이라 하여 생긴 신정문!\n신정문에는 어마무시하게 예쁜 한옥이 있다.\n신정문을 처음 본 사람들 중 열의 아홉은\n사진찍기 바쁠 정도로 예쁜 건축물이다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -112,7 +112,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="드나드는 사람들을 관찰해보니\n모두 커다란 가방을 메고있다.\n가방 안에는 노트북이 있을 것이 분명하다.\n왜냐하면, 이 건물은 소프트웨어공학과와\n전자재료공학과가 주로 사용하기 때문이다."
+                        android:text="신정문 옆 쪽에는 전대 힐링 숲이 있다.\n많은 나무, 벤치, JBNU 조형물이 있다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -124,7 +124,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="5호관은 특이하게 건물 안이 무척 시원하다.\n더운 여름에는 참 좋지만,\n겨울에는 오히려 밖보다 건물 안이 더 춥다."
+                        android:text="신정문 쪽에는 전동 킥보드가 매우 많다.\n전동 킥보드가 급하다면, 신정문으로!"
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -136,7 +136,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="5호관에는 전설이 하나 있다.\n바로 고라니가 있다는 사실!\n3층과 5층을 자주 돌아다니다 보면,\n고라니를 발견할 수 있을지도 모른다!"
+                        android:text="신정문을 오래 탐험하다 보면 신정문 안쪽을\n드나드는 사람들을 발견할 수 있다!\n외관과 달리 내부는 무척 현대적이다.\n내부는 어떻게해야 들어갈 수 있는거지?"
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">

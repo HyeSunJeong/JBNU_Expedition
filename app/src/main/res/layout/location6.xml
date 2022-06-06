@@ -85,7 +85,7 @@
                             android:layout_marginTop="235dp"
                             android:layout_marginLeft="30dp"
                             android:letterSpacing="0.01"
-                            android:text="2022년 06월 06일 일요일"
+                            android:text="공대인의 든든한 밥집"
                             android:textSize="19dp"
                             android:textColor="#747474"
                             android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
@@ -100,7 +100,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="공대 지역에서 우연히 발견한 건물.\n낡은 벽돌 외관과는 다르게 화장실은\n최신식인 것 같다."
+                        android:text="점심 시간 즈음, 공대 사람들이 일제히\n어디론가 향한다. 궁금증에 따라가보니\n후생관이 나왔다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -112,7 +112,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="드나드는 사람들을 관찰해보니\n모두 커다란 가방을 메고있다.\n가방 안에는 노트북이 있을 것이 분명하다.\n왜냐하면, 이 건물은 소프트웨어공학과와\n전자재료공학과가 주로 사용하기 때문이다."
+                        android:text="땡볕인데도 불구하고 길게 늘어진 줄을 기다려\n키오스크에 도착했다. 3,000원 ~ 5,000원\n사이 무척 착한 가격의 음식들을 팔았다.\n음식을 기다리는 줄도 꽤 길었다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -124,19 +124,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="5호관은 특이하게 건물 안이 무척 시원하다.\n더운 여름에는 참 좋지만,\n겨울에는 오히려 밖보다 건물 안이 더 춥다."
-                        android:textSize="16dp"
-                        android:textColor="#747474"
-                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
-                    </TextView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="30dp"
-                        android:lineSpacingExtra="4.5dp"
-                        android:letterSpacing="0.01"
-                        android:text="5호관에는 전설이 하나 있다.\n바로 고라니가 있다는 사실!\n3층과 5층을 자주 돌아다니다 보면,\n고라니를 발견할 수 있을지도 모른다!"
+                        android:text="좌석이 많아서 혼밥하기에도 안성맞춤이다.\n음식 맛도 꽤 먹을만 해서 돈이 없거나.\n시간이 촉박할 때 이용하기 좋다."
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">

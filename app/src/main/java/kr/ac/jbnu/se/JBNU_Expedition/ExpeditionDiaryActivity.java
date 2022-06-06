@@ -21,6 +21,7 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
     public ImageView locViews[] = new ImageView[NUM_OF_LOCATIONS];  // 각 장소에 대한 이미지뷰
     public Dialog dialogs[] = new Dialog[NUM_OF_LOCATIONS];         // 각 장소에 대한 대화창
     public static Context context_expDiary;     // ImageView 다른 클래스에서 사용하기 위함
+    public ImageView closeDialogBtn[] = new ImageView[NUM_OF_LOCATIONS]; // 각 장소에 대한 닫기 버튼
 
     private ImageView diaryBack;                // 뒤로 가기 버튼
 
@@ -69,19 +70,19 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     dialogs[idx].show();
                     // Dialog 배경 투명!
-                    dialogs[0].getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialogs[idx].getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 }
             });
         }
 
-//        // 닫기 버튼
-//        closeDialogBtn[0] = (ImageView) findViewById(R.id.loc0);
-//        closeDialogBtn[1] = (ImageView) findViewById(R.id.loc1);
-//        closeDialogBtn[2] = (ImageView) findViewById(R.id.loc2);
-//        closeDialogBtn[3] = (ImageView) findViewById(R.id.loc3);
-//        closeDialogBtn[4] = (ImageView) findViewById(R.id.loc4);
-//        closeDialogBtn[5] = (ImageView) findViewById(R.id.loc5);
-//        closeDialogBtn[6] = (ImageView) findViewById(R.id.loc6);
+        // 닫기 버튼
+        closeDialogBtn[0] = (ImageView) findViewById(R.id.close_btn);
+        closeDialogBtn[1] = (ImageView) findViewById(R.id.close_btn);
+        closeDialogBtn[2] = (ImageView) findViewById(R.id.close_btn);
+        closeDialogBtn[3] = (ImageView) findViewById(R.id.close_btn);
+        closeDialogBtn[4] = (ImageView) findViewById(R.id.close_btn);
+        closeDialogBtn[5] = (ImageView) findViewById(R.id.close_btn);
+        closeDialogBtn[6] = (ImageView) findViewById(R.id.close_btn);
 
         // Dialog 배경 투명!
         // location0.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -89,18 +90,16 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         // TODO 주의사항: findViewById()를 쓸 때는 앞에 반드시 다이얼로그 붙이기!
 
 
-//        // Dialog 닫기 버튼 동작 등록
-//        ImageView closeDialogBtn = (ImageView) findViewById(R.id.closeBtn);
-//        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
-//            final int idx = i;
-//            closeDialogBtn[i].setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    dialogs[idx].show();
-//                }
-//            });
-//        }
+        // Dialog 닫기 버튼 동작 등록
 
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            final int idx = i;
+            closeDialogBtn[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialogs[idx].dismiss();
+                }
+            });
+        }
     }
-
 }

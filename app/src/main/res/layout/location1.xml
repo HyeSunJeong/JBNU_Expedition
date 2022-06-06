@@ -85,7 +85,7 @@
                             android:layout_marginTop="235dp"
                             android:layout_marginLeft="30dp"
                             android:letterSpacing="0.01"
-                            android:text="2022년 06월 01일 화요일"
+                            android:text="역사 속 한 장면"
                             android:textSize="19dp"
                             android:textColor="#747474"
                             android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
@@ -112,7 +112,7 @@
                         android:layout_marginLeft="30dp"
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
-                        android:text="분수 위에 있는 한옥에는 '문회루'라고 적혀있다.\n문회루에 올라가니 경치가 참 좋았다.\n경치를 바라보다 우연히 분수대 바닥을 바라보니\n무언갈 발견했다! 이건 누구 아이디어일까?"
+                        android:text="분수 위에 있는 한옥에는 '문회루'라고 적혀있다.\n문회루에 올라가니 경치가 참 좋았다.\n그러다 우연히 분수대 바닥을 바라보니\n무언갈 발견했다! 이건 누구 아이디어일까?"
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
@@ -137,6 +137,18 @@
                         android:lineSpacingExtra="4.5dp"
                         android:letterSpacing="0.01"
                         android:text="분수대는 낮에 바라보는 풍경과 밤에 바라보는\n풍경이 다르니 낮밤 모두 탐험 해야 좋겠다."
+                        android:textSize="16dp"
+                        android:textColor="#747474"
+                        android:fontFamily="@font/apple_sd_gothic_neo_medium">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:lineSpacingExtra="4.5dp"
+                        android:letterSpacing="0.01"
+                        android:text="가끔 분수대에 방문하면 볼 수 있는 랜드마크가\n있다. 하나는 분수대를 둥둥 떠다니는 오리 가족!\n또 하나는 신나는 음악과 함께 반짝이는 자전거\n아저씨!"
                         android:textSize="16dp"
                         android:textColor="#747474"
                         android:fontFamily="@font/apple_sd_gothic_neo_medium">
