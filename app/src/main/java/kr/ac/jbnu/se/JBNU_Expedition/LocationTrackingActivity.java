@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,17 +43,18 @@ import java.util.Set;
 
 
 public class LocationTrackingActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+    // Naver Map 관련 상수
     private static final int PERMISSION_REQUEST_CODE = 100;
     private static final String[] PERMISSIONS = {
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
-    private FusedLocationSource locationSource;         // 지자기, 가속도 센서를 활용해 최적의 위치를 반환 제공
+    private FusedLocationSource locationSource;         // 지자기, 가속도 센서를 활용해 최적의 위치를 제공
     private NaverMap naverMap;
 
     private static final int NUM_OF_LOCATIONS = 7;      // 탐험할 장소 개수
-
     private ImageView diaryBtn;     // 탐험 일지 화면으로 가는 버튼 (이미지뷰)
 
     // jbnu_locations.json 데이터를 저장할 자료구조
@@ -79,7 +81,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             public void onClick(View view) {
                 Intent intent = new Intent(LocationTrackingActivity.this, ExpeditionDiaryActivity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -112,6 +113,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
+
         this.naverMap = naverMap;
         naverMap.setLocationSource(locationSource); // 현재 위치
         ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_REQUEST_CODE);
@@ -130,29 +132,15 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             markers[i] = new Marker();
             setMarker(markers[i], latitude[i], longitude[i]);
             markers[i].setCaptionText(locNames[i]);
-        }
-        // 모든 마커 비활성화
-        for (int i=0; i< NUM_OF_LOCATIONS; i++) {
             markers[i].setMap(null);
         }
 
-
         // 현재 위치 좌표 (위도,경도) 가져오기
         LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Log.d("tttt", lm.toString());
         Criteria criteria = new Criteria();
         String provider = lm.getBestProvider(criteria, true);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -175,15 +163,13 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             return;
         }
         lastLocation = lm.getLastKnownLocation(locationProvider);
-        Log.d("tttt", lastLocation.toString());
-
         double curLat = 0.0;        // 사용자 현재 위치 위도
         double curLon = 0.0;        // 사용자 현재 위치 경도
         curLat = lastLocation.getLatitude();
         curLon = lastLocation.getLongitude();
-        Log.d("현재 위치 좌표 ", String.valueOf(curLat) + String.valueOf(curLon));
+        Log.d("ttt현재 위치 좌표 ", String.valueOf(curLat) + String.valueOf(curLon));
         String test = getClosestLocation(curLat, curLon);
-        Log.d("현재 위치와 가장 가까운 장소는? ", test);
+        Log.d("ttt현재 위치와 가장 가까운 장소는? ", test);
 
         naverMap.addOnLocationChangeListener(this::saveVisitLocation);  // 현재 위치가 변경될 때마다 위치 저장.
 
@@ -191,10 +177,11 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         // 방문한 장소의 마커만 표시함 !!
         // 방문한 장소 (현재 위치와 등록된 장소를 비교해서 일정 이상 가까이 가면 방문한 것으로 함) 마커만 띄우기..
         naverMap.addOnLocationChangeListener(location -> {
+
             String s = getClosestLocation(location.getLatitude(), location.getLongitude()); // 현재 위치와 가장 가까운 장소를 구함
-            Log.d("tttt", s);
-            int idx = Arrays.binarySearch(locNames, s); // 장소 인덱스를 구함
-            Log.d("ttt", String.valueOf(idx));
+            Log.d("ttt가장 가까운 장소 ", s);
+            int idx = Arrays.asList(locNames).indexOf(s);
+            Log.d("ttt가까운 장소 인덱스 ", String.valueOf(idx));
             setMarker(markers[idx], latitude[idx], longitude[idx]);     // 마커를 세팅!
 
 
@@ -206,9 +193,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 //            locViews[idx].setClickable(true);           // 방문한 ImageView를 클릭(터치)가능하도록 변경
             // Log.d("방문 여부", String.valueOf(isVisited[idx]));
 
-
-
-            Log.d("tt", markers[idx].toString() + latitude[idx].toString() + longitude[idx].toString());
         });
 
 
@@ -318,7 +302,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 
         String locNames[] = jbnuLocInfo.keySet().toArray(new String[0]);
         String cloestLoc = locNames[minIndex];
-        Log.d("ttt", cloestLoc);
 
         return cloestLoc;
     }
@@ -329,10 +312,8 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         double lat = Math.round(location.getLatitude() * 10000) / 10000.0;    // 위도 -> 소수점 아래 5자리에서 반올림
         double lon = Math.round(location.getLongitude() * 1000) / 1000.0;     // 경도 -> 소수점 아래 4자리에서 반올림
         String currentLoc = String.valueOf(lat) + "@" + String.valueOf(lon);
-        Log.d("location test", currentLoc);
-
+        Log.d("ttt보정된 좌표", currentLoc);
         visitLocations.add(currentLoc);  // 방문한 위치 좌표 저장 Set<double, double>
-        Log.d("HashSet<String> test ", visitLocations.toString());
     }
 
 }
