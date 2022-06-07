@@ -83,14 +83,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             }
         });
 
-//        // 탐험 일지 화면에서 각 이미지뷰 초기 세팅
-//        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
-//            locViews[0] = (ImageView) findViewById(R.id.loc0);
-//            locViews[i].setVisibility(View.INVISIBLE);    // 아직 탐험(방문)하지 않았으면 안보이도록
-//            locViews[i].setClickable(false);              // 아직 탐험(방문)하지 않았으면 클릭할 수 없도록
-//        }
-
-
         // 지도 객체 생성
         FragmentManager fm = getSupportFragmentManager();
         MapFragment mapFragment = (MapFragment) fm.findFragmentById(R.id.map);
@@ -131,7 +123,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             markers[i] = new Marker();
             setMarker(markers[i], latitude[i], longitude[i]);
             markers[i].setCaptionText(locNames[i]);
-            markers[i].setMap(null);
+            // markers[i].setMap(null);
         }
 
         // 현재 위치 좌표 (위도,경도) 가져오기
@@ -162,13 +154,10 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             return;
         }
         lastLocation = lm.getLastKnownLocation(locationProvider);
-        double curLat = 0.0;        // 사용자 현재 위치 위도
-        double curLon = 0.0;        // 사용자 현재 위치 경도
-        curLat = lastLocation.getLatitude();
-        curLon = lastLocation.getLongitude();
+        double curLat = lastLocation.getLatitude();;        // 사용자 현재 위치 위도
+        double curLon = lastLocation.getLongitude();        // 사용자 현재 위치 경도
         Log.d("ttt현재 위치 좌표 ", String.valueOf(curLat) + String.valueOf(curLon));
-        String test = getClosestLocation(curLat, curLon);
-        Log.d("ttt현재 위치와 가장 가까운 장소는? ", test);
+        Log.d("ttt현재 위치와 가장 가까운 장소는? ", getClosestLocation(curLat, curLon));
 
         naverMap.addOnLocationChangeListener(this::saveVisitLocation);  // 현재 위치가 변경될 때마다 위치 저장.
 
@@ -182,18 +171,8 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             int idx = Arrays.asList(locNames).indexOf(s);
             Log.d("ttt가까운 장소 인덱스 ", String.valueOf(idx));
             setMarker(markers[idx], latitude[idx], longitude[idx]);     // 마커를 세팅!
-
-
-            /// 방문(탐험) 했으면 -> 탐험 일지에 해당 장소의 ImageView를 visible하게 변경 & 해당 ImageView의 onClick 활성화 시킴 (또는 clickable 속성 변경)
             isVisited[idx] = true;
-            setVisible(true);
-
-//            locViews[idx].setVisibility(View.VISIBLE);  // 방문한 ImageView를 visible하게 변경
-//            locViews[idx].setClickable(true);           // 방문한 ImageView를 클릭(터치)가능하도록 변경
-            // Log.d("방문 여부", String.valueOf(isVisited[idx]));
-
         });
-
 
         // UI
         UiSettings uiSettings = naverMap.getUiSettings();
