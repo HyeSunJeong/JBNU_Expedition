@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/drawable/diary.xml" value="0.255" />
+        <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/drawable/login_border.xml" value="0.229" />
+        <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/font/font.xml" value="0.2796875" />
         <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/layout/expedition_diary.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/layout/location0.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/default.LAPTOP-3NVM16GI/Desktop/mobileAppProject/app/src/main/res/layout/location_tracking.xml" value="0.14583333333333334" />
         <entry key="app/src/main/res/drawable/background.xml" value="0.1565" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1695" />
-        <entry key="app/src/main/res/drawable/diary.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/diary_background.xml" value="0.1695" />
         <entry key="app/src/main/res/drawable/diary_window.xml" value="0.1695" />
         <entry key="app/src/main/res/drawable/edit_text_border.xml" value="0.1105" />
@@ -19,17 +21,11 @@
         <entry key="app/src/main/res/drawable/top_bar.xml" value="0.1695" />
         <entry key="app/src/main/res/font/font.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13728470111448834" />
-        <entry key="app/src/main/res/layout/expedition_diary.xml" value="0.314239501953125" />
+        <entry key="app/src/main/res/layout/expedition_diary.xml" value="0.3018020629882814" />
         <entry key="app/src/main/res/layout/loc1.xml" value="0.23148148148148148" />
         <entry key="app/src/main/res/layout/location0.xml" value="0.26788024902343754" />
-        <entry key="app/src/main/res/layout/location1.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/location2.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/location3.xml" value="0.28125" />
-        <entry key="app/src/main/res/layout/location4.xml" value="0.28125" />
-        <entry key="app/src/main/res/layout/location5.xml" value="0.28125" />
-        <entry key="app/src/main/res/layout/location6.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/location1.xml" value="0.2506927490234375" />
         <entry key="app/src/main/res/layout/location_pop1.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/location_tracking.xml" value="0.1" />
         <entry key="app/src/main/res/layout/login.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/map.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/sign_in.xml" value="0.21447143554687503" />
