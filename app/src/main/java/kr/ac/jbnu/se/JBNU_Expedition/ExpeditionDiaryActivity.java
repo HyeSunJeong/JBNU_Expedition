@@ -1,45 +1,42 @@
 package kr.ac.jbnu.se.JBNU_Expedition;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
-
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-
-// TODO (혜선)
-// ImageView가 아닌 location 탐험 UI를 탐험하지 않았다면, 보이지 않게, 탐험 했다면 보이게 설정하기
-// Dialog 창에서 X ImageView를 누르면 Dialog 창 닫게 만들기
-
-
 public class ExpeditionDiaryActivity extends AppCompatActivity {
 
-    public static Context context_expDiary;     // ImageView 다른 클래스에서 사용하기 위함
-
     private static final int NUM_OF_LOCATIONS = 7;                          // 탐험할 장소 개수
-    public ImageView locViews[] = new ImageView[NUM_OF_LOCATIONS];          // 각 장소에 대한 이미지뷰
-    public Dialog dialogs[] = new Dialog[NUM_OF_LOCATIONS];                 // 각 장소에 대한 대화창
-    public ImageView closeDialogBtn[] = new ImageView[NUM_OF_LOCATIONS];    // 각 장소에 대한 닫기 버튼
 
+    private FrameLayout locFrames[] = new FrameLayout[NUM_OF_LOCATIONS];
+    private ImageView locViews[] = new ImageView[NUM_OF_LOCATIONS];          // 각 장소에 대한 이미지뷰
+    private Dialog dialogs[] = new Dialog[NUM_OF_LOCATIONS];                 // 각 장소에 대한 대화창
+    private ImageView closeDialogBtn[] = new ImageView[NUM_OF_LOCATIONS];    // 각 장소에 대한 닫기 버튼
     private ImageView diaryBack;                // 뒤로 가기 버튼
 
-    // Dialog location0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expedition_diary);
-        context_expDiary = this;      // ImageView 다른 클래스에서 사용하기 위함
+
+        // 각 장소 프레임 레이아웃 세팅
+        locFrames[0] = (FrameLayout) findViewById(R.id.loc0_frame);
+        locFrames[1] = (FrameLayout) findViewById(R.id.loc1_frame);
+        locFrames[2] = (FrameLayout) findViewById(R.id.loc2_frame);
+        locFrames[3] = (FrameLayout) findViewById(R.id.loc3_frame);
+        locFrames[4] = (FrameLayout) findViewById(R.id.loc4_frame);
+        locFrames[5] = (FrameLayout) findViewById(R.id.loc5_frame);
+        locFrames[6] = (FrameLayout) findViewById(R.id.loc6_frame);
+
         diaryBack = (ImageView) findViewById(R.id.diary_back);
 
         // 각 이미지뷰 초기 세팅
@@ -69,12 +66,6 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         dialogs[5].setContentView(R.layout.location5);
         dialogs[6].setContentView(R.layout.location6);
 
-        // 아직 탐험(방문)하지 않은 곳은 안보이도록 너굴맨이 처리했다구!
-        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
-            // locViews[i].setVisibility(View.INVISIBLE);    // 아직 탐험(방문)하지 않았으면 안보이도록
-            locViews[i].setClickable(false);              // 아직 탐험(방문)하지 않았으면 클릭할 수 없도록
-        }
-
         closeDialogBtn[0] = (ImageView) dialogs[0].findViewById(R.id.close_btn0);
         closeDialogBtn[1] = (ImageView) dialogs[1].findViewById(R.id.close_btn1);
         closeDialogBtn[2] = (ImageView) dialogs[2].findViewById(R.id.close_btn2);
@@ -83,8 +74,9 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         closeDialogBtn[5] = (ImageView) dialogs[5].findViewById(R.id.close_btn5);
         closeDialogBtn[6] = (ImageView) dialogs[6].findViewById(R.id.close_btn6);
 
+
         // 탐험일지 클릭 이벤트 지정
-        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+        for (int i = 0; i < NUM_OF_LOCATIONS; i++) {
 
             final int idx = i;
             locViews[i].setOnClickListener(new View.OnClickListener() {
@@ -99,7 +91,7 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         }
 
         // 각 탐험일지 Dialog 닫기 버튼(X) 동작
-        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+        for (int i = 0; i < NUM_OF_LOCATIONS; i++) {
 
             final int idx = i;
             closeDialogBtn[i].setOnClickListener(new View.OnClickListener() {
@@ -119,4 +111,5 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
             }
         });
     }
+
 }

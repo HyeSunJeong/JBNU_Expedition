@@ -67,6 +67,7 @@
 
                         <!--location0-->
                         <FrameLayout
+                            android:id="@+id/loc0_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -81,38 +82,39 @@
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
                                 android:orientation="vertical">
+
                                 <ImageView
                                     android:layout_width="150dp"
                                     android:layout_height="103dp"
-                                    android:layout_marginTop="15dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/loc0">
-                                </ImageView>
+                                    android:layout_marginTop="15dp"
+                                    android:src="@drawable/loc0"></ImageView>
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="18dp"
                                     android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold"
                                     android:text="전북대의 유럽"
-                                    android:textSize="17.5dp"
                                     android:textColor="#A0A0A0"
-                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
-                                </TextView>
+                                    android:textSize="17.5dp"></TextView>
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="18dp"
                                     android:layout_marginTop="1dp"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold"
                                     android:text="중앙도서관"
-                                    android:textSize="23dp"
                                     android:textColor="#747474"
-                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
-                                </TextView>
+                                    android:textSize="23dp"></TextView>
                             </LinearLayout>
                         </FrameLayout>
 
                         <!--location1-->
                         <FrameLayout
+                            android:id="@+id/loc1_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -167,6 +169,7 @@
 
                         <!--location2-->
                         <FrameLayout
+                            android:id="@+id/loc2_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -213,6 +216,7 @@
 
                         <!--location3-->
                         <FrameLayout
+                            android:id="@+id/loc3_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -268,6 +272,7 @@
 
                         <!--location4-->
                         <FrameLayout
+                            android:id="@+id/loc4_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -314,6 +319,7 @@
 
                         <!--location5-->
                         <FrameLayout
+                            android:id="@+id/loc5_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -368,6 +374,7 @@
                         android:paddingTop="15dp">
                         <!--location6-->
                         <FrameLayout
+                            android:id="@+id/loc6_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
