@@ -142,18 +142,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             return;
         }
         Location lastLocation = lm.getLastKnownLocation(provider);
-        String locationProvider = LocationManager.NETWORK_PROVIDER;
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        lastLocation = lm.getLastKnownLocation(locationProvider);
         double curLat = lastLocation.getLatitude();;        // 사용자 현재 위치 위도
         double curLon = lastLocation.getLongitude();        // 사용자 현재 위치 경도
         Log.d("ttt현재 위치 좌표 ", String.valueOf(curLat) + String.valueOf(curLon));
