@@ -191,7 +191,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         marker.setMap(naverMap);
         marker.setWidth(100);
         marker.setHeight(100);
-        marker.setIcon(OverlayImage.fromResource(R.drawable.diary_map));
+        marker.setIcon(OverlayImage.fromResource(R.drawable.marker));
         marker.setIconPerspectiveEnabled(true); // 마커에 원근 효과 적용
         marker.setHideCollidedMarkers(true);    // 다른 마커와 겹칠 경우 마커가 숨겨짐
         marker.setCaptionColor(Color.rgb(255,139,139));     // 캡션 색 지정
