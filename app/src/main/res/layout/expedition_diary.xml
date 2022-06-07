@@ -50,6 +50,7 @@
             android:background="#F1F1F1">
             <FrameLayout
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
@@ -58,85 +59,384 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <!--location0,location1-->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/loc0"
+                        <!--location0-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="12.5dp"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="12.5dp"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location0 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc0">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="전북대의 유럽"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="중앙도서관"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
 
-                        <ImageView
-                            android:id="@+id/loc1"
+                        <!--location1-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location1 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc1">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="역사 속 한 장면"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="분수대"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
 
                     </LinearLayout>
 
+                    <!--location2, location3-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingTop="15dp">
 
-                        <ImageView
-                            android:id="@+id/loc2"
+                        <!--location2-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="12.5dp"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="12.5dp"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location2 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc2">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="전북대의 랜드마크"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="신정문"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
 
-                        <ImageView
-                            android:id="@+id/loc3"
+                        <!--location3-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location3 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc3">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="소공의 고향, 심장"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="공대 5호관"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
+
                     </LinearLayout>
 
+
+                    <!--location4, location5-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingTop="15dp">
 
-                        <ImageView
-                            android:id="@+id/loc4"
+                        <!--location4-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="12.5dp"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="12.5dp"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location4 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc4">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="너가 있어 행복해"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="구정문"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
 
-                        <ImageView
-                            android:id="@+id/loc5"
+                        <!--location5-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location5 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc5">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="밤 산책에는"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="덕진공원"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
+
                     </LinearLayout>
 
+
+                    <!--location6, location7-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingTop="15dp">
-
-                        <ImageView
-                            android:id="@+id/loc6"
+                        <!--location6-->
+                        <FrameLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="12.5dp"
-                            android:src="@drawable/diary">
-                        </ImageView>
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="12.5dp"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location6 탐험 UI-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="103dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/loc6">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="공대인의 밥집"
+                                    android:textSize="17.5dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="1dp"
+                                    android:text="후생관"
+                                    android:textSize="23dp"
+                                    android:textColor="#747474"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
+                                </TextView>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <!--location7-->
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/loc7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/diary">
+                            </ImageView>
+                            <!--location7 탐험 UI-->
+                            <FrameLayout
+                                android:layout_width="180dp"
+                                android:layout_height="200dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Comming Soon"
+                                    android:textSize="20dp"
+                                    android:textColor="#A0A0A0"
+                                    android:fontFamily="@font/apple_sd_gothic_neo_bold">
+                                </TextView>
+                            </FrameLayout>
+                        </FrameLayout>
                     </LinearLayout>
 
                 </LinearLayout>
