@@ -109,6 +109,7 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
                     dialogs[idx].show();
                     // Dialog 배경 투명!
                     dialogs[idx].getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialogs[idx].setCancelable(false); // 영역 외 클릭시 창이 사라지지 않게 하기 위해
                 }
             });
         }
