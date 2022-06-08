@@ -74,11 +74,20 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         // 탐험 일지 화면으로 가는 버튼 (이미지뷰)
         diaryBtn = (ImageView) findViewById(R.id.diary_btn);
 
-        // 탐험 일지 버튼 (인탠트)
+        // 탐험 일지 Activity로 전환 (Intent)
         diaryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LocationTrackingActivity.this, ExpeditionDiaryActivity.class);
+
+                // 방문한 장소에 대한 정보를 넘겨줌 (0:미방문, 1:방문)
+                StringBuilder sb = new StringBuilder();
+                for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+                    if (isVisited[i]) sb.append(1);
+                    else sb.append(0);
+                }
+                Log.d("ttt isVisited -> sb -> ", sb.toString());
+                intent.putExtra("str", sb.toString());
                 startActivity(intent);
             }
         });
@@ -99,6 +108,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         // parse JSON
         String jsonStr = getJsonStr("jsons/jbnu_locations.json");
         parseJson(jsonStr);
+
     }
 
 
@@ -109,12 +119,12 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         naverMap.setLocationSource(locationSource); // 현재 위치
         ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_REQUEST_CODE);
 
-        // 지도 상에 마커 표시
-        Marker markers[] = new Marker[NUM_OF_LOCATIONS];    // 각 위치에 표시할 마커 객체 배열
+        // 지도 상에 표시할 마커 객체 배열
+        Marker markers[] = new Marker[NUM_OF_LOCATIONS];
         String locNames[] = jbnuLocInfo.keySet().toArray(new String[0]);
 
         for (int i = 0; i < NUM_OF_LOCATIONS; i++) {
-            Double latlon[] = jbnuLocInfo.get(locNames[i]);
+            Double latlon[] = jbnuLocInfo.get(locNames[i]);     // 지정된 탐험 장소들의 위도,경도값을 가져옴
             latitude[i] = latlon[0];
             longitude[i] = latlon[1];
         }
@@ -123,8 +133,9 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             markers[i] = new Marker();
             setMarker(markers[i], latitude[i], longitude[i]);
             markers[i].setCaptionText(locNames[i]);
-            // markers[i].setMap(null);
+            markers[i].setMap(null);    // 처음에는 마커 지도에 표시 X  (방문하면 표시됨)
         }
+
 
         // 현재 위치 좌표 (위도,경도) 가져오기
         LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -159,14 +170,16 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             int idx = Arrays.asList(locNames).indexOf(s);
             Log.d("ttt가까운 장소 인덱스 ", String.valueOf(idx));
             setMarker(markers[idx], latitude[idx], longitude[idx]);     // 마커를 세팅!
-            isVisited[idx] = true;
+            isVisited[idx] = true;  // 방문여부 저장!
         });
+
 
         // UI
         UiSettings uiSettings = naverMap.getUiSettings();
         uiSettings.setLocationButtonEnabled(true);  // 현재 위치 버튼 표시
         uiSettings.setCompassEnabled(true);         // 나침반 표시
     }
+
 
 
     @Override
@@ -183,13 +196,23 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
     }
 
 
+
+
+    //    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        ((ExpeditionDiaryActivity) ExpeditionDiaryActivity.diaryContext).showExpDiary(1);
+//    }
+
+
+
     // marker 커스텀 세팅 함수 (위치, 크기, 이미지)
     // @param   marker                  설정을 적용할 marker 인스턴스
     // @param   latitude, longtiude     위도, 경도
     private void setMarker(Marker marker, double latitude, double longitude) {
         marker.setPosition(new LatLng(latitude, longitude));
         marker.setMap(naverMap);
-        marker.setWidth(100);
+        marker.setWidth(100);       // 마커의 크기
         marker.setHeight(100);
         marker.setIcon(OverlayImage.fromResource(R.drawable.diary_map));
         marker.setIconPerspectiveEnabled(true); // 마커에 원근 효과 적용
@@ -200,7 +223,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
     }
 
 
-    // JSON file --> string
+    // JSON file --> String
     private String getJsonStr(String fileName)
     {
         String jsonStr = "";
