@@ -108,7 +108,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         // parse JSON
         String jsonStr = getJsonStr("jsons/jbnu_locations.json");
         parseJson(jsonStr);
-
     }
 
 
@@ -159,7 +158,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         Log.d("ttt현재 위치와 가장 가까운 장소는? ", getClosestLocation(curLat, curLon));
 
         naverMap.addOnLocationChangeListener(this::saveVisitLocation);  // 현재 위치가 변경될 때마다 위치 저장.
-
         // 사용자 위치 변경에 대한 이벤트 리스너
         // 방문한 장소의 마커만 표시함 !!
         // 방문한 장소 (현재 위치와 등록된 장소를 비교해서 일정 이상 가까이 가면 방문한 것으로 함) 마커만 띄우기..
@@ -173,14 +171,11 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
             isVisited[idx] = true;  // 방문여부 저장!
         });
 
-
         // UI
         UiSettings uiSettings = naverMap.getUiSettings();
         uiSettings.setLocationButtonEnabled(true);  // 현재 위치 버튼 표시
         uiSettings.setCompassEnabled(true);         // 나침반 표시
     }
-
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -195,17 +190,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         }
     }
 
-
-
-
-    //    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        ((ExpeditionDiaryActivity) ExpeditionDiaryActivity.diaryContext).showExpDiary(1);
-//    }
-
-
-
     // marker 커스텀 세팅 함수 (위치, 크기, 이미지)
     // @param   marker                  설정을 적용할 marker 인스턴스
     // @param   latitude, longtiude     위도, 경도
@@ -218,8 +202,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         marker.setIconPerspectiveEnabled(true); // 마커에 원근 효과 적용
         marker.setHideCollidedMarkers(true);    // 다른 마커와 겹칠 경우 마커가 숨겨짐
         marker.setCaptionColor(Color.rgb(255,139,139));     // 캡션 색 지정
-//        marker.setCaptionMinZoom(12);   // 해당 줌 레벨 "이상" 에서만 캡션이 나타남
-//        marker.setCaptionMaxZoom(16);   // 해당 줌 레벨 "이하" 에서만 캡션이 나타남
     }
 
 
@@ -288,7 +270,6 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
                 minIndex = i;
             }
         }
-
         String locNames[] = jbnuLocInfo.keySet().toArray(new String[0]);
         String cloestLoc = locNames[minIndex];
 
