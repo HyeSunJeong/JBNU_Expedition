@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -25,6 +26,12 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+        // 지도 activity에서 방문한 기록 가져옴
+        Intent intent = getIntent();
+        String s = intent.getStringExtra("str");
+        Log.d("ttt과연..인텐트로 잘 넘어왔나??", s);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expedition_diary);
 
@@ -37,9 +44,23 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         locFrames[5] = (FrameLayout) findViewById(R.id.loc5_frame);
         locFrames[6] = (FrameLayout) findViewById(R.id.loc6_frame);
 
-        diaryBack = (ImageView) findViewById(R.id.diary_back);
+        // 처음에는 탐험한 곳이 없으므로 탐험일지에 모두 안보이는 상태에서 시작함
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            locFrames[i].setVisibility(View.INVISIBLE);     // 보이지 않고 자리는 남음
+            locFrames[i].setClickable(false);               // 터치도 안되게 해야지~
+        }
 
-        // 각 이미지뷰 초기 세팅
+        // Line31-34에서 받은 방문한 탐험장소를 탐험일지에 보이도록 함
+        char isVisit[] = s.toCharArray();
+        Log.d("ttt isVisit[]", String.valueOf(isVisit));
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            if (isVisit[i] == '1') {
+                locFrames[i].setVisibility(View.VISIBLE);   // 탐험일지에 방문한 장소 보이게!
+                locFrames[i].setClickable(true);            // 터치도 되게 해야지~
+            }
+        }
+
+        // 탐험 장소 이미지뷰
         locViews[0] = (ImageView) findViewById(R.id.loc0);
         locViews[1] = (ImageView) findViewById(R.id.loc1);
         locViews[2] = (ImageView) findViewById(R.id.loc2);
@@ -48,7 +69,7 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         locViews[5] = (ImageView) findViewById(R.id.loc5);
         locViews[6] = (ImageView) findViewById(R.id.loc6);
 
-        // Dialog 초기화
+        // 탐험 장소에 대한 Dialog
         dialogs[0] = new Dialog(ExpeditionDiaryActivity.this);
         dialogs[1] = new Dialog(ExpeditionDiaryActivity.this);
         dialogs[2] = new Dialog(ExpeditionDiaryActivity.this);
@@ -73,6 +94,8 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         closeDialogBtn[4] = (ImageView) dialogs[4].findViewById(R.id.close_btn4);
         closeDialogBtn[5] = (ImageView) dialogs[5].findViewById(R.id.close_btn5);
         closeDialogBtn[6] = (ImageView) dialogs[6].findViewById(R.id.close_btn6);
+
+        diaryBack = (ImageView) findViewById(R.id.diary_back);
 
 
         // 탐험일지 클릭 이벤트 지정
@@ -112,5 +135,4 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
             }
         });
     }
-
 }

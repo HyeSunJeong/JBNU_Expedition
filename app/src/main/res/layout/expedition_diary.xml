@@ -9,7 +9,6 @@
         android:layout_height="70dp"
         android:background="#F9F9F9">
 
-
         <ImageView
             android:id="@+id/diary_back"
             android:layout_width="30dp"
@@ -67,7 +66,6 @@
 
                         <!--location0-->
                         <FrameLayout
-                            android:id="@+id/loc0_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -78,6 +76,10 @@
                                 android:src="@drawable/diary">
                             </ImageView>
                             <!--location0 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc0_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -88,7 +90,8 @@
                                     android:layout_height="103dp"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="15dp"
-                                    android:src="@drawable/loc0"></ImageView>
+                                    android:src="@drawable/loc0">
+                                </ImageView>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -98,7 +101,8 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_bold"
                                     android:text="전북대의 유럽"
                                     android:textColor="#A0A0A0"
-                                    android:textSize="17.5dp"></TextView>
+                                    android:textSize="17.5dp">
+                                </TextView>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -108,13 +112,14 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold"
                                     android:text="중앙도서관"
                                     android:textColor="#747474"
-                                    android:textSize="23dp"></TextView>
+                                    android:textSize="23dp">
+                                </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                         <!--location1-->
                         <FrameLayout
-                            android:id="@+id/loc1_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -124,6 +129,10 @@
                                 android:src="@drawable/diary">
                             </ImageView>
                             <!--location1 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc1_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -156,6 +165,7 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
                                 </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                     </LinearLayout>
@@ -169,7 +179,6 @@
 
                         <!--location2-->
                         <FrameLayout
-                            android:id="@+id/loc2_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -180,6 +189,10 @@
                                 android:src="@drawable/diary">
                             </ImageView>
                             <!--location2 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc2_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -212,11 +225,11 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
                                 </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                         <!--location3-->
                         <FrameLayout
-                            android:id="@+id/loc3_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -226,6 +239,10 @@
                                 android:src="@drawable/diary">
                             </ImageView>
                             <!--location3 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc3_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -258,6 +275,7 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
                                 </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                     </LinearLayout>
@@ -272,7 +290,6 @@
 
                         <!--location4-->
                         <FrameLayout
-                            android:id="@+id/loc4_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -283,6 +300,10 @@
                                 android:src="@drawable/diary">
                             </ImageView>
                             <!--location4 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc4_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -315,11 +336,11 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
                                 </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                         <!--location5-->
                         <FrameLayout
-                            android:id="@+id/loc5_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -328,7 +349,12 @@
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/diary">
                             </ImageView>
+
                             <!--location5 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc5_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -361,6 +387,7 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
                                 </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                     </LinearLayout>
@@ -374,7 +401,6 @@
                         android:paddingTop="15dp">
                         <!--location6-->
                         <FrameLayout
-                            android:id="@+id/loc6_frame"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
@@ -385,6 +411,10 @@
                                 android:src="@drawable/diary">
                             </ImageView>
                             <!--location6 탐험 UI-->
+                            <FrameLayout
+                                android:id="@+id/loc6_frame"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <LinearLayout
                                 android:layout_width="180dp"
                                 android:layout_height="200dp"
@@ -417,6 +447,7 @@
                                     android:fontFamily="@font/apple_sd_gothic_neo_extra_bold">
                                 </TextView>
                             </LinearLayout>
+                            </FrameLayout>
                         </FrameLayout>
 
                         <!--location7-->
