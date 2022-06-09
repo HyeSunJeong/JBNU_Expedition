@@ -134,5 +134,6 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
