@@ -36,13 +36,17 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         setContentView(R.layout.expedition_diary);
 
         // 각 장소 프레임 레이아웃 세팅
-        locFrames[0] = (FrameLayout) findViewById(R.id.loc0_frame);
-        locFrames[1] = (FrameLayout) findViewById(R.id.loc1_frame);
-        locFrames[2] = (FrameLayout) findViewById(R.id.loc2_frame);
-        locFrames[3] = (FrameLayout) findViewById(R.id.loc3_frame);
-        locFrames[4] = (FrameLayout) findViewById(R.id.loc4_frame);
-        locFrames[5] = (FrameLayout) findViewById(R.id.loc5_frame);
-        locFrames[6] = (FrameLayout) findViewById(R.id.loc6_frame);
+//        locFrames[0] = (FrameLayout) findViewById(R.id.loc0_frame);
+//        locFrames[1] = (FrameLayout) findViewById(R.id.loc1_frame);
+//        locFrames[2] = (FrameLayout) findViewById(R.id.loc2_frame);
+//        locFrames[3] = (FrameLayout) findViewById(R.id.loc3_frame);
+//        locFrames[4] = (FrameLayout) findViewById(R.id.loc4_frame);
+//        locFrames[5] = (FrameLayout) findViewById(R.id.loc5_frame);
+//        locFrames[6] = (FrameLayout) findViewById(R.id.loc6_frame);
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            int rID = getResources().getIdentifier("loc" + i + "_" + "frame", "id", getPackageName());
+            locFrames[i] = (FrameLayout) findViewById(rID);
+        }
 
         // 처음에는 탐험한 곳이 없으므로 탐험일지에 모두 안보이는 상태에서 시작함
         for (int i=0; i<NUM_OF_LOCATIONS; i++) {
@@ -61,39 +65,54 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         }
 
         // 탐험 장소 이미지뷰
-        locViews[0] = (ImageView) findViewById(R.id.loc0);
-        locViews[1] = (ImageView) findViewById(R.id.loc1);
-        locViews[2] = (ImageView) findViewById(R.id.loc2);
-        locViews[3] = (ImageView) findViewById(R.id.loc3);
-        locViews[4] = (ImageView) findViewById(R.id.loc4);
-        locViews[5] = (ImageView) findViewById(R.id.loc5);
-        locViews[6] = (ImageView) findViewById(R.id.loc6);
+//        locViews[0] = (ImageView) findViewById(R.id.loc0);
+//        locViews[1] = (ImageView) findViewById(R.id.loc1);
+//        locViews[2] = (ImageView) findViewById(R.id.loc2);
+//        locViews[3] = (ImageView) findViewById(R.id.loc3);
+//        locViews[4] = (ImageView) findViewById(R.id.loc4);
+//        locViews[5] = (ImageView) findViewById(R.id.loc5);
+//        locViews[6] = (ImageView) findViewById(R.id.loc6);
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            int rID = getResources().getIdentifier("loc" + i, "id", getPackageName());
+            locViews[i] = (ImageView) findViewById(rID);
+        }
 
         // 탐험 장소에 대한 Dialog
-        dialogs[0] = new Dialog(ExpeditionDiaryActivity.this);
-        dialogs[1] = new Dialog(ExpeditionDiaryActivity.this);
-        dialogs[2] = new Dialog(ExpeditionDiaryActivity.this);
-        dialogs[3] = new Dialog(ExpeditionDiaryActivity.this);
-        dialogs[4] = new Dialog(ExpeditionDiaryActivity.this);
-        dialogs[5] = new Dialog(ExpeditionDiaryActivity.this);
-        dialogs[6] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[0] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[1] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[2] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[3] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[4] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[5] = new Dialog(ExpeditionDiaryActivity.this);
+//        dialogs[6] = new Dialog(ExpeditionDiaryActivity.this);
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            dialogs[i] = new Dialog(ExpeditionDiaryActivity.this);
+        }
 
         // xml 연결
-        dialogs[0].setContentView(R.layout.location0);
-        dialogs[1].setContentView(R.layout.location1);
-        dialogs[2].setContentView(R.layout.location2);
-        dialogs[3].setContentView(R.layout.location3);
-        dialogs[4].setContentView(R.layout.location4);
-        dialogs[5].setContentView(R.layout.location5);
-        dialogs[6].setContentView(R.layout.location6);
+//        dialogs[0].setContentView(R.layout.location0);
+//        dialogs[1].setContentView(R.layout.location1);
+//        dialogs[2].setContentView(R.layout.location2);
+//        dialogs[3].setContentView(R.layout.location3);
+//        dialogs[4].setContentView(R.layout.location4);
+//        dialogs[5].setContentView(R.layout.location5);
+//        dialogs[6].setContentView(R.layout.location6);
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            int rID = getResources().getIdentifier("location" + i, "layout", getPackageName());
+            dialogs[i].setContentView(rID);
+        }
 
-        closeDialogBtn[0] = (ImageView) dialogs[0].findViewById(R.id.close_btn0);
-        closeDialogBtn[1] = (ImageView) dialogs[1].findViewById(R.id.close_btn1);
-        closeDialogBtn[2] = (ImageView) dialogs[2].findViewById(R.id.close_btn2);
-        closeDialogBtn[3] = (ImageView) dialogs[3].findViewById(R.id.close_btn3);
-        closeDialogBtn[4] = (ImageView) dialogs[4].findViewById(R.id.close_btn4);
-        closeDialogBtn[5] = (ImageView) dialogs[5].findViewById(R.id.close_btn5);
-        closeDialogBtn[6] = (ImageView) dialogs[6].findViewById(R.id.close_btn6);
+//        closeDialogBtn[0] = (ImageView) dialogs[0].findViewById(R.id.close_btn0);
+//        closeDialogBtn[1] = (ImageView) dialogs[1].findViewById(R.id.close_btn1);
+//        closeDialogBtn[2] = (ImageView) dialogs[2].findViewById(R.id.close_btn2);
+//        closeDialogBtn[3] = (ImageView) dialogs[3].findViewById(R.id.close_btn3);
+//        closeDialogBtn[4] = (ImageView) dialogs[4].findViewById(R.id.close_btn4);
+//        closeDialogBtn[5] = (ImageView) dialogs[5].findViewById(R.id.close_btn5);
+//        closeDialogBtn[6] = (ImageView) dialogs[6].findViewById(R.id.close_btn6);
+        for (int i=0; i<NUM_OF_LOCATIONS; i++) {
+            int rID = getResources().getIdentifier("close_btn" + i, "id", getPackageName());
+            closeDialogBtn[i] = (ImageView) dialogs[i].findViewById(rID);
+        }
 
         diaryBack = (ImageView) findViewById(R.id.diary_back);
 

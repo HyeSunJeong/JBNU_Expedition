@@ -57,6 +57,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="25dp"
         android:hint="비밀번호"
+        android:inputType="textPassword"
         android:textColorHint="#A3A3A3"
         android:fontFamily="@font/apple_sd_gothic_neo_medium"
         android:textSize="18dp">

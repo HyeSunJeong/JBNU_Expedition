@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -33,15 +34,21 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.sign_in);
         FirebaseApp.initializeApp(this);
 
-        // 변수와 xml 파일의 id 연결
         firebaseAuth = FirebaseAuth.getInstance();
+        // 현재 로그인한 사용자 가져오기
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null) {
+            // 로그인 되어 있으면 로그인 액티비티를 끝내고 지도 화면으로 넘어감.
+            finish();
+            startActivity(new Intent(getApplicationContext(), LocationTrackingActivity.class));
+        }
 
+        // 변수와 xml 파일의 id 연결
         signInEmail = (EditText) findViewById(R.id.sign_in_email);
         signInPassword = (EditText) findViewById(R.id.sign_in_password);
 
         signInBtn = (ImageButton) findViewById(R.id.sign_in_btn);
         signUpBtn = (TextView) findViewById(R.id.sign_up_btn);
-
 
 
         // 로그인 버튼: 공백 구별
