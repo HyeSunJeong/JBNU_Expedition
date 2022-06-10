@@ -102,7 +102,7 @@ public class ExpeditionDiaryActivity extends AppCompatActivity {
         for (int i = 0; i < NUM_OF_LOCATIONS; i++) {
 
             final int idx = i;
-            locViews[i].setOnClickListener(new View.OnClickListener() {
+            locFrames[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     // 각 탐험장소 ImageView를 누르면 해당하는 Dialog 띄우기
